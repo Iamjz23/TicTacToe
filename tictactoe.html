@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Outfit&family=Raleway+Dots&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title> <!--Final game by Jeremy-->
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class = "topnav">
+                <div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <img src="images/burger-menu.png" alt="burger menu">
+                      </a>
+                      <div id="myLinks">
+                        <button id="navHome" class="navitem">Home</button>
+                        <button id="navLeader" class="navitem">Leaderboard</button>
+                      </div>
+                </div>
+            </div>
+            <div class="logoDiv">
+                <img src="images/logo.png" alt="logo" id="logo">
+            </div>
+            <div>
+                
+            </div>     
+          </div>
+    </header>
+    <section id="home" class="show"> <!--home by Yara-->
+        <div class="pageGroup">
+            <div></div>
+            <div class="home-section">
+                <div class="outterbox">
+                    <div class="home-player1">
+                        <label class="label labelOne">Player 1</label>
+                        <input type="text" id="userNameOne" placeholder="Username1">
+                    </div>
+                </div>
+                
+                <div class="home-start">
+                    <div class="home-start-1">
+                        <img src="images/O.png" alt="O Image" class="homeImage">
+                    </div>
+                    <div class="home-start-2">
+                        <button id="startBTN" class="start_button">START</button>
+                        <button id="rulesBTN" class="start_button">RULES</button>
+                    </div>
+                    <div>
+                        <div class="home-start-3">
+                            <img src="images/X.png" alt="X image" class="homeImage">
+                        </div>
+                    </div>
+                </div>
+                <div class="outterbox">
+                    <div class="home-player2">
+                        <label class="label labelTwo">Player 2</label>
+                        <input type="text" id="userNameTwo" placeholder="Username2">
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </section>
+    <section id="rules" class="hide">
+        <div class="pageGroup">
+            <div></div>
+            <div class="rulesDiv">
+                <h2 class="rulesh2">RULES</h2>
+                <div class="rulesgroup">
+                    <ol>
+                        <li>-Tic-Tac-Toe is a game that is played on a grid of 3x3.</li>
+                        <li>
+                            -Player 1 is 'O' & Player 2 is 'X'.
+                           Use your mouse to select a tile on the gameboard.
+                        </li>
+                        <li>
+                           - The first player to get 3 turns in a row (up, down, across,
+                            or diagonally) is the winner.
+                        </li>
+                        <li>
+                           - When all 9 squares are full, the game is over. If no player has 3 in a row, the game ends in a tie.
+                        </li>
+                        <li>
+                            - Click SAVE to save your score on the Leaderboard.
+                         </li>
+                    </ol>
+                </div>
+                <button id="backtoHome" class="start_button">BACK</button>
+            </div>
+            <div></div>
+        </div>
+
+    </section>
+    <section id="gamePage" class="hide"> <!--Game page by Jeremy-->
+        <div class="pageGroup">
+            <div class="ScoreArea">
+                <div></div>
+                <div class="gamePageScoreArea">
+                    <img src="images/O.png" alt="O Image" class="scoreImage">
+                    <h2 id="playerOne"></h2>
+                    <h2 id="player1Score">0</h2>
+                </div>
+                <div></div>
+            </div>
+            <div id="gameContainer">
+                <h2 id="statusText" class="statueTextO"></h2>
+                <div id="cellContainer">
+                    <div class="cell cell1"><div cellIndex = "0" class="innerCell innercell1 innerCellO"></div></div>
+                    <div class="cell cell2"><div cellIndex = "1" class="innerCell innercell2 innerCellO"></div></div>
+                    <div class="cell cell3"><div cellIndex = "2" class="innerCell innercell3 innerCellO"></div></div>
+                    <div class="cell cell4"><div cellIndex = "3" class="innerCell innercell4 innerCellO"></div></div>
+                    <div class="cell cell5"><div cellIndex = "4" class="innerCell innercell5 innerCellO"></div></div>
+                    <div class="cell cell6"><div cellIndex = "5" class="innerCell innercell6 innerCellO"></div></div>
+                    <div class="cell cell7"><div cellIndex = "6" class="innerCell innercell7 innerCellO"></div></div>
+                    <div class="cell cell8"><div cellIndex = "7" class="innerCell innercell8 innerCellO"></div></div>
+                    <div class="cell cell9"><div cellIndex = "8" class="innerCell innercell9 innerCellO"></div></div>
+                </div>
+                <div class="buttonDiv">
+                    <button id="restartBTN">NEXT</button>
+                    <button id="saveBTN">SAVE</button>
+                </div>
+            </div>
+            <div class="ScoreArea">
+                <div></div>
+                <div class="gamePageScoreArea">
+                    <img src="images/X.png" alt="X Image" class="scoreImage">
+                    <h2 id="playerTwo"></h2>
+                    <h2 id="player2Score">0</h2>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+    <section id="leaderBoard" class="hide"> <!--Leaderboard by Nour-->
+        <div class="pageGroup">
+            <div></div>
+            <div id="leaderboardGroup" class="leaderboardGroup">
+                <h2 class="h2leader">LeaderBoard</h2>
+                <div id="userList"><hr></div>
+                <div>
+                    <button id="resetBTN" class="start_button">RESET</button>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </section>
+    <script src='script.js'></script>
+</body>
+</html>
